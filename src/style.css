@@ -33,7 +33,7 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
-  width: 100´%;
+  width: 100%;
 }
 
 .img-pokemon {
@@ -53,3 +53,24 @@ h1 {
   font-size: 100%;
   border: 3px solid;
 }
+/* Estilos para la cuadrícula */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas en la cuadrícula */
+  gap: 10px; /* Espacio entre cuadros */
+  padding: 20px;
+}
+
+.image-box {
+  border: 1px solid #ddd; /* Borde alrededor de los cuadros */
+  padding: 10px; /* Espaciado interior del cuadro */
+  text-align: center;
+}
+
+img {
+  max-width: 100%; /* Ajustar el tamaño máximo de las imágenes */
+  height: auto;
+}
+
+
+  
