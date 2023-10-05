@@ -7,27 +7,28 @@
   </head>
   <body>
     <script src="main.js" type="module"></script>
-       <header>
+       <header id="bienvenida">
          <body class="fondoH">
             <img class="imagenheader"
              src="imagenes/International_Pokémon_logo.svg.png" alt"Pokedex"
-             />
-            </header>
-            <div class="centrar">
+             /> 
+              <div class="centrar">
               <h1>¡Bienvenida a esta fantástica aventura!</h1></header>
                   </div>
-            <select data-testid="select-filter" name="type">
-              <option value="types">Tipos</option>
+            </header>
+          
+                  <h2>Tipo</h2>
+            <select data-testid="filter-type" class="select-filter" name="type">
+              <option value="all">Todos</option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
-              <option value="Grass">Grass</option>
+              <option value="grass">Grass</option>
               <option value="bug">Bug</option>
               <option value="flying">Flying</option>
               <option value="poison">Poison</option>
               <option value="normal">Normal</option>
               <option value="electric">Electric</option>
               <option value="ground">Ground</option>
-              <option value="elecric">Electric</option>
               <option value="psychic">Psychic</option>
               <option value="fighting">Fighting</option>
               <option value="rock">Rock</option>
@@ -39,7 +40,9 @@
               <option value="dark">Dark</option> 
               <!-- Agrega más opciones según sea necesario -->
             </select>
-            <select data-testid="select-filter" name="Resistant">
+            <h2>Resistencia</h2>
+            <select data-testid="filter-resistant" class ="select-filter" name="resistant">
+              <option value="all">Todos</option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
               <option value="Grass">Grass</option>
@@ -49,7 +52,7 @@
               <option value="normal">Normal</option>
               <option value="electric">Electric</option>
               <option value="ground">Ground</option>
-              <option value="elecric">Electric</option>
+              <option value="electric">Electric</option>
               <option value="psychic">Psychic</option>
               <option value="fighting">Fighting</option>
               <option value="rock">Rock</option>
