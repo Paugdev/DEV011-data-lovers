@@ -17,8 +17,9 @@ h1 {
 
 .fondoH {
   background-image: url(imagenes/840005-green-flower-background-2560x1600-large-resolution.jpg);
-  background-size: 100%;
-  background-position: 40%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
@@ -93,6 +94,7 @@ h1 {
   display: inline-block;
 }
 
-h2 {
-  font-display: unset;
+.selectorcontainer{
+  display: flex; /* los siguientes tres son necesarios para centrar y acomodar */
+  align-items: center;
 }

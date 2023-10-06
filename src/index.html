@@ -15,8 +15,13 @@
               <div class="centrar">
               <h1>¡Bienvenida a esta fantástica aventura!</h1></header>
                   </div>
-            </header>
-          
+            </header> 
+            <div clas="Por-nombre">
+              <label for="nombre">Buscar por Nombre:</label>
+              <input type="text" id="nombre" placeholder="Nombre">
+                 <button id="buscar">Buscar</button>
+            </div>
+                <div class="selectorcontainer">
                   <h2>Tipo</h2>
             <select data-testid="filter-type" class="select-filter" name="type">
               <option value="all">Todos</option>
@@ -40,12 +45,12 @@
               <option value="dark">Dark</option> 
               <!-- Agrega más opciones según sea necesario -->
             </select>
-            <h2>Resistencia</h2>
+              <h2>Resistencia</h2>
             <select data-testid="filter-resistant" class ="select-filter" name="resistant">
               <option value="all">Todos</option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
-              <option value="Grass">Grass</option>
+              <option value="grass">Grass</option>
               <option value="bug">Bug</option>
               <option value="flying">Flying</option>
               <option value="poison">Poison</option>
@@ -62,7 +67,7 @@
               <option value="fairy">Fairy</option>
               <option value="steel">Steel</option>
               <option value="dark">Dark</option> 
-            </select>
+            </select></div>
         <div class="pokemons-container">
           <ul id="pokemonsContainer" class="contenedor-pokemons"></ul>
         
