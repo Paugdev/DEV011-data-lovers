@@ -10,21 +10,21 @@
        <header id="bienvenida">
          <body class="fondoH">
             <img class="imagenheader"
-             src="imagenes/International_Pokémon_logo.svg.png" alt"Pokedex"
+             src="imagenes/International_Pokémon_logo.svg.png" alt="Pokedex"
              /> 
               <div class="centrar">
               <h1>¡Bienvenida a esta fantástica aventura!</h1></header>
                   </div>
             </header> 
             <div clas="Por-nombre">
-              <label for="nombre">Buscar por Nombre:</label>
-              <input type="text" id="nombre" placeholder="Nombre">
+              <label for="nombre">Buscar por Nombre del:</label>
+              <input type="text" id="nombre" placeholder="Pokemon">
                  <button id="buscar">Buscar</button>
             </div>
                 <div class="selectorcontainer">
                   <h2>Tipo</h2>
             <select data-testid="filter-type" class="select-filter" name="type">
-              <option value="all">Todos</option>
+              <option value="all">  </option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
               <option value="grass">Grass</option>
@@ -47,7 +47,7 @@
             </select>
               <h2>Resistencia</h2>
             <select data-testid="filter-resistant" class ="select-filter" name="resistant">
-              <option value="all">Todos</option>
+              <option value="all"></option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
               <option value="grass">Grass</option>
@@ -68,9 +68,11 @@
               <option value="steel">Steel</option>
               <option value="dark">Dark</option> 
             </select></div>
+            <div class="button-container">
+              <button id="limpiarBusqueda" data-testid="limpiar-busqueda">Limpiar Búsqueda</button>
+            </div>
         <div class="pokemons-container">
           <ul id="pokemonsContainer" class="contenedor-pokemons"></ul>
-        
         </div>
   </body>
 </html>

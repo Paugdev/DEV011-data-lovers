@@ -57,4 +57,17 @@ filterResistant.addEventListener("change", function () {
       `;
     pokemonsContainer.appendChild(pokemonCard);
   });
+  
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Este código se ejecutará después de que el DOM haya cargado
+  
+    const limpiarBusqueda = document.getElementById("limpiarBusqueda");
+    
+    limpiarBusqueda.addEventListener("click", function() {
+      // Hacer algo cuando se haga clic en el botón
+      alert("Se hizo clic en el botón");
+    });
+  });
+
