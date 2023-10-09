@@ -17,3 +17,7 @@ export const renderItems = (data) => {
     pokemonsContainer.appendChild(pokemonCard);
   });
 };
+
+
+
+
