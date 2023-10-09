@@ -57,17 +57,34 @@ filterResistant.addEventListener("change", function () {
       `;
     pokemonsContainer.appendChild(pokemonCard);
   });
-  
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Este código se ejecutará después de que el DOM haya cargado
-  
-    const limpiarBusqueda = document.getElementById("limpiarBusqueda");
-    
-    limpiarBusqueda.addEventListener("click", function() {
-      // Hacer algo cuando se haga clic en el botón
-      alert("Se hizo clic en el botón");
-    });
-  });
 
+
+const limpiarBusqueda = document.getElementById("limpiarBusqueda");
+
+limpiarBusqueda.addEventListener("click", function () {
+  // Restablece los filtros a su estado predeterminado
+  const filterType = document.querySelector(
+    "select[data-testid='filter-type']"
+  );
+  filterType.selectedIndex = 0;
+
+  const filterResistant = document.querySelector(
+    "select[data-testid='filter-resistant']"
+  );
+  filterResistant.selectedIndex = 0;
+
+  // Vuelve a mostrar todos los Pokémon sin filtros
+  pokemonsContainer.innerHTML = "";
+  pokemons.forEach((pokemon) => {
+    const pokemonCard = document.createElement("li");
+    pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
+    pokemonCard.innerHTML = `
+      <p class="pokename">${pokemon.name}</p>
+      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
+      <p class="poketipo">${pokemon.type}<p>
+    `;
+    pokemonsContainer.appendChild(pokemonCard);
+  });
+});
