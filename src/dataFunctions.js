@@ -38,6 +38,6 @@ export const averageWeight = (pokemons) => {
   );
 
   return (
-    pokemonsWeight.reduce((acc, item) => acc + item, 0) / pokemonsWeight.length
+    (pokemonsWeight.reduce((acc, item) => acc + item, 0) / pokemonsWeight.length).toFixed(2)
   );
 };
