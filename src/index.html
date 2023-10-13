@@ -16,13 +16,14 @@
               <h1>¡Bienvenida a esta fantástica aventura!</h1></header>
                   </div>
             </header> 
-            <div clas="Por-nombre">
-              <label for="nombre">Buscar por Nombre del:</label>
-              <input type="text" id="nombre" placeholder="Pokemon">
+            <div class="nav-container">
+            <div class="by-name">
+              <label for="nombre">Search by Name:</label>
+              <input type="text" id="name" placeholder="Nombre">
                  <button id="buscar">Buscar</button>
             </div>
                 <div class="selectorcontainer">
-                  <h2>Tipo</h2>
+                  <h2>Type</h2>
             <select data-testid="filter-type" class="select-filter" name="type">
               <option value="all">  </option>
               <option value="fire">Fire</option>
@@ -45,7 +46,7 @@
               <option value="dark">Dark</option> 
               <!-- Agrega más opciones según sea necesario -->
             </select>
-              <h2>Resistencia</h2>
+              <h2> Resistant </h2>
             <select data-testid="filter-resistant" class ="select-filter" name="resistant">
               <option value="all"></option>
               <option value="fire">Fire</option>
@@ -71,6 +72,11 @@
             <div class="button-container">
               <button id="limpiarBusqueda" data-testid="limpiar-busqueda">Limpiar Búsqueda</button>
             </div>
+            </select>
+          <h2 data-testid="Average-weight" class="average">Average Pokemon Weight</h2>
+        </div>
+          </div>
+        </div>
         <div class="pokemons-container">
           <ul id="pokemonsContainer" class="contenedor-pokemons"></ul>
         </div>
