@@ -1,91 +1,28 @@
-// import { type } from './dataFunctions.js';
-import data from "./data/pokemon/pokemon.js";
-import {
-  filterByName,
-  filterByResistant,
-  filterByType,
-  averageWeight,
-} from "./dataFunctions.js";
+// import { example } from './dataFunctions.js';
+// import { renderItems } from './view.js';
 
-// console.log(filterType(data.pokemon, "grass"));
+// // import data from './data/lol/lol.js';
+// import data from './data/pokemon/pokemon.js';
+// // import data from './data/rickandmorty/rickandmorty.js';
 
-const pokemons = data.pokemon;
+// console.log(example, renderItems, data);
+const imageGrid = document.getElementById('imageGrid');
 
-const pokemonsContainer = document.getElementById("pokemonsContainer");
+function crearImagenes() {
+    const numeroDeImagenes = 251;
 
-pokemonsContainer.innerHTML = "";
-pokemons.forEach((pokemon) => {
-  const pokemonCard = document.createElement("li");
-  pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
-  pokemonCard.innerHTML = `
-  <p class="pokename">${pokemon.name}</p>
-      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
-      <p class="poketipo">${pokemon.type}<p>
-      `;
-  pokemonsContainer.appendChild(pokemonCard);
-});
-/*const NumberCount = document.querySelector("li[data-testid='number-count']");*/
+    for (let i = 1; i <= numeroDeImagenes; i++) {
+        const imageBox = document.createElement('div');
+        imageBox.className = 'image-box';
 
-const filterType = document.querySelector("select[data-testid='filter-type']");
+        const image = document.createElement('img');
+        image.src = `imagen${i}.jpg`; // Cambiar por la ruta de tus imágenes
+        image.alt = `Imagen ${i}`;
 
-filterType.addEventListener("change", function () {
-  const selectValue = filterType.value;
-  const pokemonsFiltered = filterByType(pokemons, selectValue);
-  pokemonsContainer.innerHTML = "";
-  pokemonsFiltered.forEach((pokemon) => {
-    const pokemonCard = document.createElement("li");
-    pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
-    pokemonCard.innerHTML = `
-  <p class="pokename">${pokemon.name}</p>
-      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
-      <p class="poketipo">${pokemon.type}<p>
-      `;
-    pokemonsContainer.appendChild(pokemonCard);
-  });
-});
+        imageBox.appendChild(image);
+        imageGrid.appendChild(imageBox);
+    }
+}
 
-const filterResistant = document.querySelector(
-  "select[data-testid='filter-resistant']"
-);
+window.onload = crearImagenes;
 
-filterResistant.addEventListener("change", function () {
-  const selectValue = filterResistant.value;
-  const pokemonsFiltered = filterByResistant(pokemons, selectValue);
-  pokemonsContainer.innerHTML = "";
-  pokemonsFiltered.forEach((pokemon) => {
-    const pokemonCard = document.createElement("li");
-    pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
-    pokemonCard.innerHTML = `
-  <p class="pokename">${pokemon.name}</p>
-      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
-      <p class="poketipo">${pokemon.type}<p>
-      `;
-    pokemonsContainer.appendChild(pokemonCard);
-  });
-});
-
-const nameInput = document.querySelector("input[id='name']");
-
-const btnBuscar = document.querySelector("button[id='buscar']");
-btnBuscar.addEventListener("click", function () {
-  const byName = nameInput.value;
-  const pokemonsByName = filterByName(pokemons, byName);
-  pokemonsContainer.innerHTML = "";
-  pokemonsByName.forEach((pokemon) => {
-    const pokemonCard = document.createElement("li");
-    pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
-    pokemonCard.innerHTML = `
-      <p class="pokename">${pokemon.name}</p>
-      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
-      <p class="poketipo">${pokemon.type}<p>
-      `;
-    pokemonsContainer.appendChild(pokemonCard);
-  });
-});
-
-const averagePokemonWeight = document.querySelector(
-  "h2[data-testid='Average-weight']"
-);
-const averagePokemonWeightValue = averageWeight(pokemons);
-averagePokemonWeight.innerHTML =
-  "Average Pokemon Weight: " + averagePokemonWeightValue;
