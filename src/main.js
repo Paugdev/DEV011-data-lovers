@@ -64,6 +64,24 @@ filterResistant.addEventListener("change", function () {
   });
 });
 
+const limpiarBusqueda = document.getElementById("limpiarBusqueda");
+
+limpiarBusqueda.addEventListener("click", function () {
+  // Restablece los filtros a su estado predeterminado
+  const filterType = document.querySelector(
+    "select[data-testid='filter-type']"
+  );
+  filterType.selectedIndex = 0;
+
+  const filterResistant = document.querySelector(
+    "select[data-testid='filter-resistant']"
+  );
+  filterResistant.selectedIndex = 0;
+
+  // Vuelve a mostrar todos los Pokémon sin filtros
+  pokemonsContainer.innerHTML = "";
+  pokemons.forEach((pokemon) => {
+    
 const nameInput = document.querySelector("input[id='name']");
 
 const btnBuscar = document.querySelector("button[id='buscar']");
@@ -89,3 +107,4 @@ const averagePokemonWeight = document.querySelector(
 const averagePokemonWeightValue = averageWeight(pokemons);
 averagePokemonWeight.innerHTML =
   "Average Pokemon Weight: " + averagePokemonWeightValue;
+
