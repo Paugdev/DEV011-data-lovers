@@ -89,3 +89,31 @@ const averagePokemonWeight = document.querySelector(
 const averagePokemonWeightValue = averageWeight(pokemons);
 averagePokemonWeight.innerHTML =
   "Average Pokemon Weight: " + averagePokemonWeightValue;
+
+const limpiarBusqueda = document.getElementById("limpiarBusqueda");
+
+limpiarBusqueda.addEventListener("click", function () {
+  // Restablece los filtros a su estado predeterminado
+  const filterType = document.querySelector(
+    "select[data-testid='filter-type']"
+  );
+  filterType.selectedIndex = 0;
+
+  const filterResistant = document.querySelector(
+    "select[data-testid='filter-resistant']"
+  );
+  filterResistant.selectedIndex = 0;
+
+  // Vuelve a mostrar todos los Pokémon sin filtros
+  pokemonsContainer.innerHTML = "";
+  pokemons.forEach((pokemon) => {
+    const pokemonCard = document.createElement("li");
+    pokemonCard.setAttribute("class", "contenedor-imagen-pokemon");
+    pokemonCard.innerHTML = `
+      <p class="pokename">${pokemon.name}</p>
+      <img class="img-pokemon" id="imagePokemon" src="${pokemon.img}"> 
+      <p class="poketipo">${pokemon.type}<p>
+    `;
+    pokemonsContainer.appendChild(pokemonCard);
+  });
+});

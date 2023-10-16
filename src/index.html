@@ -25,7 +25,7 @@
                 <div class="selectorcontainer">
                   <h2>Type</h2>
             <select data-testid="filter-type" class="select-filter" name="type">
-              <option value="all">Todos</option>
+              <option value="all">All</option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
               <option value="grass">Grass</option>
@@ -44,11 +44,12 @@
               <option value="fairy">Fairy</option>
               <option value="steel">Steel</option>
               <option value="dark">Dark</option> 
+             
               <!-- Agrega más opciones según sea necesario -->
             </select>
               <h2> Resistant </h2>
             <select data-testid="filter-resistant" class ="select-filter" name="resistant">
-              <option value="all">Todos</option>
+              <option value="all">All</option>
               <option value="fire">Fire</option>
               <option value="water">Water</option>
               <option value="grass">Grass</option>
@@ -69,6 +70,9 @@
               <option value="steel">Steel</option>
               <option value="dark">Dark</option> 
             </select>
+            <div class="button-container">
+              <button id="limpiarBusqueda" data-testid="limpiar-busqueda">Limpiar Búsqueda</button>
+            </div>
           <h2 data-testid="Average-weight" class="average">Average Pokemon Weight</h2>
         </div>
           </div>
@@ -77,5 +81,6 @@
           <ul id="pokemonsContainer" class="contenedor-pokemons"></ul>
         
         </div>
+      <footer>Developed by Paulina González y Massiel Quintanilla</footer>
   </body>
 </html>

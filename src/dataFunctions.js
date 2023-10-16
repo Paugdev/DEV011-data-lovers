@@ -9,6 +9,9 @@ export const anotherExample = () => {
 };
 
 export const filterByType = (pokemons, value) => {
+  if(value === 'all'){
+    return pokemons
+  }
   const pokemonsByType = pokemons.filter((pokemon) =>
     pokemon.type.includes(value)
   );
@@ -16,6 +19,9 @@ export const filterByType = (pokemons, value) => {
 };
 
 export const filterByResistant = (pokemons, value) => {
+  if(value === 'all'){
+    return pokemons
+  }
   const pokemonsByResistant = pokemons.filter((pokemon) =>
     pokemon.resistant.includes(value)
   );
