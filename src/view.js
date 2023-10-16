@@ -3,7 +3,9 @@
 export const renderItems = (data) => {
   const pokemons = data;
 
-  const pokemonsContainer = document.getElementById("pokemonsContainer");
+  const pokemonsContainer = document.createElement('ul')
+  pokemonsContainer.setAttribute('id', 'pokemonsContainer')
+  pokemonsContainer.setAttribute('classs', 'contenedor-pokemons')
 
   pokemonsContainer.innerHTML = "";
   pokemons.forEach((pokemon) => {
@@ -16,4 +18,5 @@ export const renderItems = (data) => {
       `;
     pokemonsContainer.appendChild(pokemonCard);
   });
+  return pokemonsContainer
 };
