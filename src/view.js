@@ -20,3 +20,7 @@ export const renderItems = (data) => {
   });
   return pokemonsContainer
 };
+
+
+
+
