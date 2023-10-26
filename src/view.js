@@ -16,7 +16,7 @@ export const renderItems = (data) => {
       <p class="poketipo">${pokemon.type}<p>
       </div>
       `;
-      pokemonsContainer.appendChild(pokemonCard);
-    });
+    pokemonsContainer.appendChild(pokemonCard);
+  });
   return pokemonsContainer;
 };
